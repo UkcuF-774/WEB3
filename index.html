@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>ASCII Video — Perfect Sync</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    :root{
+      --bg:#000;
+      --ascii-color:#00ff66;
+    }
+    html,body{
+      height:100%;margin:0;
+      background:var(--bg);color:var(--ascii-color);
+      font-family:monospace;
+      overflow:hidden;
+    }
+    .wrap{
+      height:100%;width:100%;
+      display:flex;align-items:center;justify-content:center;
+    }
+    pre#screen{
+      margin:0;
+      white-space:pre;
+      line-height:7px;
+      font-size:8px;
+      user-select:none;
+      display:none;
+    }
+    #loading{color:#888;text-align:center;}
+    #hint{
+      position:fixed;
+      left:12px;bottom:12px;
+      padding:8px 10px;
+      background:rgba(255,255,255,0.05);
+      color:#cfcfcf;
+      font-size:13px;
+      border-radius:8px;
+      display:none;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div>
+      <div id="loading">Loading ASCII frames…</div>
+      <pre id="screen"></pre>
+    </div>
+  </div>
+
+  <div id="hint">Tap/click/press any key to enable audio</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
